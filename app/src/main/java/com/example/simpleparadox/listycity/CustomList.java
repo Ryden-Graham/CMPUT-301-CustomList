@@ -85,6 +85,12 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city
      */
     public boolean deleteCity(City city){
+        for (City c : cities) {
+            if (city.getCityName() == c.getCityName() && city.getProvinceName() == city.getProvinceName()) {
+                cities.remove(c);
+                return true;
+            }
+        }
         return false;
     }
 }
