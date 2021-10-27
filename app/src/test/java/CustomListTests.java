@@ -36,4 +36,17 @@ public class CustomListTests {
         list.addCity(newCity);
         assertTrue(list.hasCity(newCity));
     }
+
+    @Test
+    /**
+     * used to test deletion
+     */
+    public void deleteCityTest(){
+        int listSize = list.getCount();
+        City newCity = new City("Halifax", "NS");
+        list.addCity(newCity);
+        assertEquals(list.getCount(), listSize+1);
+        assertTrue(list.deleteCity(newCity));
+        assertEquals(list.getCount(), listSize);
+    }
 }

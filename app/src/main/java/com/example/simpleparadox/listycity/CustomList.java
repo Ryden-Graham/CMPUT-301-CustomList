@@ -78,4 +78,13 @@ public class CustomList extends ArrayAdapter<City> {
         }
         return false;
     }
+
+    /**
+     * this function will try to delete a city
+     * returns true if city successfully deleted
+     * @param city
+     */
+    public boolean deleteCity(City city){
+        return false;
+    }
 }
