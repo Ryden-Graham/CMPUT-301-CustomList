@@ -71,6 +71,11 @@ public class CustomList extends ArrayAdapter<City> {
      * @param city
      */
     public boolean hasCity(City city){
+        for (City c : cities) {
+            if (city.getCityName() == c.getCityName() && city.getProvinceName() == city.getProvinceName()) {
+                return true;
+            }
+        }
         return false;
     }
 }
